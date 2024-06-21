@@ -8,6 +8,7 @@ body {
 
 .container {
     display: flex;
+    flex-wrap: wrap; /* Added for better responsiveness */
 }
 
 .sidebar {
@@ -19,6 +20,7 @@ body {
     position: fixed;
     display: flex;
     flex-direction: column;
+    z-index: 1000; /* Ensures sidebar stays on top */
 }
 
 .sidebar .logo {
@@ -62,6 +64,7 @@ body {
     color: #ccc;
     margin-bottom: 50px;
 }
+
 .sidebar ul li a.active {
     background-color: #444;
     color: #F07A0C;
@@ -70,62 +73,28 @@ body {
 }
 
 .content {
-    margin-left: 270px; /* Adjust based on the width of the sidebar */
+    margin-left: 170px; /* Adjusted based on the width of the sidebar */
     padding: 20px;
-    width: calc(100% - 270px);
+    width: calc(100% - 170px);
     color: #f5ebeb;
 }
 
 .content-inner {
     display: flex;
+    flex-wrap: wrap; /* Added for better responsiveness */
     justify-content: space-between;
     align-items: center;
 }
-.content-about{
-    display: inline;
-}
-.content-about h1{
-    color: #F07A0C;
-}
-.content-projects{
-    display: inline;
-}
-.content-projects h1{
-    color: #F07A0C;
-}
-.content-projects h3 a{
-    color: #F07A0C;
-}
-.content-projects h3 a:hover{
-    color: #d9ddd9;
-}
-.content-contacts{
-    display: inline;
-    color: #fffbf7;
-}
-.content-contacts h1{
-    color: #F07A0C;
-}
-.content-contacts a{
-    color: #F07A0C;
-}
-.content-contacts a:hover{
-    color: #e4ded8;
-}
-.content-contacts a.facebook{
-    margin-right: 20px;
-}
-.content-contacts a.youtube{
-    margin-right: 20px;
-}
-.content-contacts a.instagram{
-    margin-right: 20px;
+
+.content-about, .content-projects, .content-contacts {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .text {
-    max-width: 50%;
+    max-width: 100%;
+    text-align: center;
 }
-
 
 .text h2 {
     margin: 0;
@@ -135,7 +104,7 @@ body {
 
 .text h1 {
     margin: 10px 0;
-    font-size: 80px;
+    font-size: 40px; /* Adjusted for smaller screens */
     color: #F07A0C;
 }
 
@@ -158,18 +127,19 @@ body {
 }
 
 .image {
-    max-width: 60%; /* Adjust as needed */
+    max-width: 100%;
+    text-align: center;
 }
 
 .profile-pic {
-    width: 400px; /* Adjust size as needed */
-    height: 400px; /* Adjust size as needed */
+    width: 200px; /* Adjusted size for better responsiveness */
+    height: 200px; /* Adjusted size for better responsiveness */
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid #F07A0C;
-    margin-right: 50%;
-    margin-top: 50px;
+    margin: 20px auto;
 }
+
 .social-media {
     margin-top: 20px;
     text-align: center;
@@ -181,4 +151,56 @@ body {
     font-size: 24px;
     text-decoration: none;
     transition: color 0.3s;
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px;
+    }
+
+    .sidebar .logo {
+        margin-bottom: 20px;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .content-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text h1 {
+        font-size: 32px;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar ul li a {
+        font-size: 18px;
+    }
+
+    .text h1 {
+        font-size: 28px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .social-media a {
+        font-size: 20px;
+    }
 }
