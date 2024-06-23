@@ -55,22 +55,22 @@ body {
     color: #F07A0C;
 }
 
-.sidebar footer {
+/* .sidebar footer {
     margin-top: auto;
     font-size: 12px;
     text-align: center;
     color: #ccc;
     margin-bottom: 50px;
-}
-.sidebar ul li a.active {
+} */
+/* .sidebar ul li a.active {
     background-color: #444;
     color: #F07A0C;
     border-radius: 5px;
     padding: 10px;
-}
+} */
 
 .content {
-    margin-left: 270px; /* Adjust based on the width of the sidebar */
+
     padding: 20px;
     width: calc(100% - 270px);
     color: #f5ebeb;
@@ -133,11 +133,11 @@ body {
     color: #f5ebeb;
 }
 
-.text h1 {
+/* .text h1 {
     margin: 10px 0;
     font-size: 80px;
     color: #F07A0C;
-}
+} */
 
 .cv-button {
     margin-top: 20px;
