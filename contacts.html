@@ -9,18 +9,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="container">
-        <nav class="sidebar">
-            <div class="logo">AT</div>
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="projects.html"><i class="fas fa-briefcase"></i> Projects</a></li>
-                <li><a href="contacts.html" class="active"><i class="fas fa-envelope"></i> Contacts</a></li>
+    <div class="flex">
+        <div class="w-3/12 shadow-lg bg-gray-800 h-screen justify-center">
+            <div class="w-11/12 mx-auto mt-20">
+                <div class="logo font-bold text-3xl text-orange-500 mb-10">AT</div>
+            <ul class="text-white">
+                <li class="mb-5 hover:text-black hover:bg-white px-2 py-3"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li class="mb-5 hover:text-black hover:bg-white px-2 py-3"><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li class="mb-5 hover:text-black hover:bg-white px-2 py-3"><a href="projects.html"><i class="fas fa-briefcase"></i> Projects</a></li>
+                <li class="mb-5 hover:text-black hover:bg-white px-2 py-3"><a href="contacts.html" class="active"><i class="fas fa-envelope"></i> Contacts</a></li>
             </ul>
             <footer>@2024</footer>
-        </nav>
-        <main class="content">
+            </div>
+        </div>
+        <main class="w-9/12 py-10 px-10">
             <div class="content-contacts">
                 <p>
                     <h1>Contacts</h1>
